@@ -9,6 +9,6 @@ public partial class StartPage : ContentPage
 	}
     private void OnButtonClick(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new Products());
+        Navigation.PushAsync(new Menu());
     }
 }

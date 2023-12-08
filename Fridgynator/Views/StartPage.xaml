@@ -2,17 +2,23 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Fridgynator.Views.StartPage"
-             BackgroundColor="#FFC2C7">
+             >
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+            <GradientStop Color="#FFC2C7" Offset="0"/>
+            <GradientStop Color="#B6E5D8" Offset="0.5"/>
+            <GradientStop Color="#FBE5C8" Offset="1"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
 
     <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-        <Image Source="logo.png"/>
+        <Image Source="fridgynator_logo.png" WidthRequest="300"/>
         <Label Text="Welcome to your smart fridge app!" TextColor="Black" HorizontalTextAlignment="Center" FontSize="24" />
         <Button Text="START" BorderColor="Black" TextColor="Black" Clicked="OnButtonClick" Margin="100,20,100,20" FontSize="24" />
         <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
-            <!-- Add your image sources here -->
             <Image Source="ketsup.png" WidthRequest="200" HeightRequest="200" Margin="0,0,10,0" />
             <Image Source="mustard.png" WidthRequest="200" HeightRequest="200" />
-            <!-- Add more images as needed -->
         </StackLayout>
     </StackLayout>
 </ContentPage>
