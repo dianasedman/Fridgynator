@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fridgynator.Views.Menu"
+             BackgroundColor="#FFC2C7">
+   
+
+    <StackLayout>
+        <Label Text="MENU" TextColor="Black" HorizontalTextAlignment="Center" FontSize="24" />
+
+        <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Orientation="Horizontal">
+                <ImageButton Source="fridge_icon.png" Clicked="NavigateToFridge" WidthRequest="130" HeightRequest="130" Padding="20" />
+                <ImageButton Source="products_icon.png" Clicked="NavigateToProducts" WidthRequest="130" HeightRequest="130" Padding="20"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Orientation="Horizontal">
+                <ImageButton Source="recipe_icon.png" Clicked="NavigateToRecipes" WidthRequest="130" HeightRequest="130" Padding="20"/>
+                <ImageButton Source="contacts_icon.png" Clicked="NavigateToContacts" WidthRequest="130" HeightRequest="130" Padding="20"/>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>
