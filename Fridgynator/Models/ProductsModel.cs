@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SQLite;
 
-namespace Fridgynator.Models
+namespace Fridgynator.Models;
+
+
+public class ProductsModel 
 {
-    [Serializable]
-    public class ProductsModel
-    {
-        public string ImageSource { get; set; }
-        public string Title { get; set; }
-        public int Quantity { get; set; }
+    [PrimaryKey, AutoIncrement]
+    public int Id { get; set; }
+    public string Title { get; set; }
+    public string ImageSource { get; set; }
+    public int Quantity { get; set; }
 
-        public ProductsModel() { }
+   // public ProductsModel() { }
 
-    }
 }

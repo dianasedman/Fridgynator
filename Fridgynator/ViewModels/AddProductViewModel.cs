@@ -1,0 +1,72 @@
+﻿using CommunityToolkit.Maui.Alerts;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using Fridgynator.Models;
+using Microsoft.Maui.Storage;
+using System.Collections.ObjectModel;
+using System.Xml.Serialization;
+
+namespace Fridgynator.ViewModels;
+
+public partial class AddProductViewModel: ObservableObject
+{
+    [ObservableProperty]
+    string title;
+
+    [ObservableProperty]
+    string imageSource;
+
+    [ObservableProperty]
+    private ObservableCollection<ProductsModel> productsList;
+
+
+
+    public AddProductViewModel()
+    {
+        ProductsList = new ObservableCollection<ProductsModel>
+            {
+                new ProductsModel { ImageSource = "banana.png", Title = "Bananas" },
+                new ProductsModel { ImageSource = "black_bread.png", Title = "Black bread" },
+                new ProductsModel { ImageSource = "broccoli.png", Title = "Broccoli" },
+                new ProductsModel { ImageSource = "cheese.png", Title = "Cheese" },
+                new ProductsModel { ImageSource = "chicken.png", Title = "Chicken" },
+                new ProductsModel { ImageSource = "cottage_cheese.png", Title = "Cottage cheese" },
+                new ProductsModel { ImageSource = "cucumber.png", Title = "Cucumber" },
+                new ProductsModel { ImageSource = "eggs.png", Title = "Eggs" },
+                new ProductsModel { ImageSource = "fish.png", Title = "Fish" },
+                new ProductsModel { ImageSource = "icecream.png", Title = "Ice cream" },
+                new ProductsModel { ImageSource = "ketsup.png", Title = "Ketchup" },
+                new ProductsModel { ImageSource = "lemon.png", Title = "Lemon" },
+                new ProductsModel { ImageSource = "meat.png", Title = "Meat" },
+                new ProductsModel { ImageSource = "milky.png", Title = "Milk" },
+                new ProductsModel { ImageSource = "mustard.png", Title = "Mustard" },
+                new ProductsModel { ImageSource = "pizza.png", Title = "Pizza" },
+                new ProductsModel { ImageSource = "sausage.png", Title = "Sausage" },
+                new ProductsModel { ImageSource = "shrimp.png", Title = "Shrimps" },
+                new ProductsModel { ImageSource = "soup.png", Title = "Soup" },
+                new ProductsModel { ImageSource = "water.png", Title = "Water" },
+                new ProductsModel { ImageSource = "white_bread.png", Title = "White bread" },
+            };
+    }
+
+
+
+    [RelayCommand]
+    public async void Save()
+    {
+        var productItem = new ProductsModel
+        {
+            Title = Title,
+            ImageSource = ImageSource
+
+        };
+
+        await App.ProductsRepository.AddProductAsync(productItem);
+
+        await Toast.Make("Product has been added to fridge!").Show();
+    }
+
+    //public IRelayCommand SaveCommand => new RelayCommand(async () => await Save());
+
+
+}

@@ -2,11 +2,18 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Fridgynator.Views.Contacts"
-             Title="Contacts">
+             Title="Contacts"
+             BackgroundColor="#FFC2C7">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="If You have any problems, contact our customer support!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <StackLayout VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
+            <StackLayout Orientation="Horizontal" >
+                <Image x:Name="imgcontacts" Source="contacts.png" WidthRequest="300" HeightRequest="300"  />
+            </StackLayout>
+        </StackLayout>
     </VerticalStackLayout>
+    
 </ContentPage>

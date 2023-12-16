@@ -4,6 +4,7 @@ using Microsoft.UI.Windowing;
 using Windows.Graphics;
 #endif
 
+using Fridgynator.Repositories;
 using Fridgynator.Views;
 
 namespace Fridgynator;
@@ -12,7 +13,9 @@ public partial class App : Application
 {
     const int WindowWidth = 540;
     const int WindowHeight = 1000;
-    public App()
+
+    public static ProductsRepository ProductsRepository { get; private set; }
+    public App(ProductsRepository productsRepository)
 	{
 
         InitializeComponent();
@@ -31,5 +34,7 @@ public partial class App : Application
         });
 
         MainPage = new NavigationPage(new StartPage());
+
+        ProductsRepository = productsRepository;
     }
 }
