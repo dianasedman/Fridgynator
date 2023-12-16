@@ -49,31 +49,26 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\bananas.png" />
-	  <None Remove="Resources\Images\cheese.png" />
 	  <None Remove="Resources\Images\contacts_icon.png" />
-	  <None Remove="Resources\Images\eggs.png" />
 	  <None Remove="Resources\Images\fridge_icon.png" />
 	  <None Remove="Resources\Images\Fridgynator_logo.png" />
-	  <None Remove="Resources\Images\icecream.png" />
 	  <None Remove="Resources\Images\ketchup.png" />
-	  <None Remove="Resources\Images\ketsup.svg" />
-	  <None Remove="Resources\Images\meat.png" />
 	  <None Remove="Resources\Images\milk.png" />
-	  <None Remove="Resources\Images\milky.svg" />
-	  <None Remove="Resources\Images\mustard.png" />
 	  <None Remove="Resources\Images\mustard1.png" />
 	  <None Remove="Resources\Images\products_icon.png" />
 	  <None Remove="Resources\Images\recipe_icon.png" />
-	  <None Remove="Resources\Images\sausage.png" />
 	  <None Remove="Resources\Images\search.png" />
-	  <None Remove="Resources\Images\soup.png" />
 	  <None Remove="Resources\Images\sourcream.png" />
 	  <None Remove="Resources\Images\start_icon.png" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="CommunityToolkit.Maui" Version="2.0.0" />
+	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 	  <PackageReference Include="MailKit" Version="4.3.0" />
 	  <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+	  <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+	  <PackageReference Include="SQLitePCLRaw.provider.dynamic_cdecl" Version="2.1.7" />
 	</ItemGroup>
 
 	<ItemGroup>

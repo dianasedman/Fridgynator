@@ -2,6 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Fridgynator.Views.Products"
+             xmlns:viewModels="clr-namespace:Fridgynator.ViewModels"
+             x:DataType="viewModels:AddProductViewModel"
              Title="Products">
 
     <ContentPage.Background>
@@ -26,7 +28,18 @@
                     <Image Source="{Binding ImageSource}" WidthRequest="100" HeightRequest="100"/>
 
                         <!--<Button Text="ADD" BorderColor="Black" TextColor="Black" Clicked="OnSaveButtonClicked"/>-->
+                        <Button 
+                            Text="Add" 
+                            Command="{Binding SaveCommand}" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="EndAndExpand"
+                            BackgroundColor="Red"
+                            CornerRadius="10"
+                            WidthRequest="100"
+                            />
 
+                        <!-- Load Button -->
+                        <!--<Button Text="Load" Clicked="OnLoadButtonClicked" HorizontalOptions="Center" VerticalOptions="EndAndExpand" />-->
                     </StackLayout>
                 </Grid>
             </DataTemplate>

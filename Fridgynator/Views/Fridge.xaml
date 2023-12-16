@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Fridgynator.Views.Fridge">
+             x:Class="Fridgynator.Views.Fridge"
+             xmlns:viewModel="clr-namespace:Fridgynator.ViewModels"
+             xmlns:models="clr-namespace:Fridgynator.Models"
+             x:DataType="viewModel:FridgeViewModel"
+             Title="Fridge">
 
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
@@ -13,8 +17,42 @@
 
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Here are Your products that you have added to your fridge!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <ListView
+            ItemsSource="{Binding ProductItems}"
+            SelectionMode="None">
+            <ListView.ItemTemplate>
+                <DataTemplate
+                    x:DataType="models:ProductsModel">
+                    <ViewCell>
+                        <StackLayout>
+                            <Frame>
+                                <Grid
+                                    Padding="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <!--<Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100*"/>
+                                        <ColumnDefinition Width="40*"/>
+                                    </Grid.ColumnDefinitions>-->
+                                    <Label
+                                        Text="{Binding Title}"
+                                        FontSize="16"
+                                        />
+                                    <Image 
+                                        Source="{Binding ImageSource}" 
+                                        WidthRequest="100" 
+                                        HeightRequest="100"/>
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </VerticalStackLayout>
 </ContentPage>

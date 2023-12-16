@@ -1,9 +1,19 @@
+using Fridgynator.ViewModels;
+
 namespace Fridgynator.Views;
 
 public partial class Fridge : ContentPage
 {
-	public Fridge()
+	FridgeViewModel viewModel;
+	public Fridge(FridgeViewModel viewModel)
 	{
 		InitializeComponent();
+		this.BindingContext = this.viewModel = viewModel;
 	}
+
+    protected override void OnAppearing()
+    {
+		base.OnAppearing();
+		viewModel.GetProductsItemsCommand.Execute(null);
+    }
 }
