@@ -49,13 +49,20 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\bananas.png" />
+	  <None Remove="Resources\Images\burger.png" />
 	  <None Remove="Resources\Images\contacts_icon.png" />
 	  <None Remove="Resources\Images\fridge_icon.png" />
 	  <None Remove="Resources\Images\Fridgynator_logo.png" />
+	  <None Remove="Resources\Images\hakklihakaste.png" />
+	  <None Remove="Resources\Images\hapukapsasupp.jpg" />
+	  <None Remove="Resources\Images\imgback.png" />
+	  <None Remove="Resources\Images\imgsearch.png" />
+	  <None Remove="Resources\Images\kartulipuder.png" />
 	  <None Remove="Resources\Images\ketchup.png" />
 	  <None Remove="Resources\Images\milk.png" />
 	  <None Remove="Resources\Images\mustard1.png" />
 	  <None Remove="Resources\Images\products_icon.png" />
+	  <None Remove="Resources\Images\rabarberikook.jpg" />
 	  <None Remove="Resources\Images\recipe_icon.png" />
 	  <None Remove="Resources\Images\search.png" />
 	  <None Remove="Resources\Images\sourcream.png" />
@@ -86,6 +93,9 @@
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Recipes.xaml">
 	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\RecipesDetailsPage.xaml">
+		<Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\StartPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
