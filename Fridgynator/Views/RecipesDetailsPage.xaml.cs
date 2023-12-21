@@ -4,7 +4,7 @@ namespace Fridgynator.Views;
 
 public partial class RecipesDetailsPage : ContentPage
 {
-	public RecipesDetailsPage(Recipes recipes)
+	public RecipesDetailsPage(Models.Recipes recipes)
 	{
 		InitializeComponent();
 		this.BindingContext = recipes;

@@ -185,7 +185,6 @@
                                    RowSpacing="4">
                         <Image
                         Grid.Row="0"
-                        Rotation="-30"
                         Aspect="AspectFit"
                         VerticalOptions="Fill"
                         HorizontalOptions="Fill"
@@ -246,7 +245,6 @@
                         <Grid RowDefinitions="*, Auto, Auto" RowSpacing="4">
                        <Image
                         Grid.Row="0"
-                        Rotation="-30"
                         Aspect="AspectFit"
                         VerticalOptions="Fill"
                         HorizontalOptions="Fill"

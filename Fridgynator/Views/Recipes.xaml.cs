@@ -32,6 +32,6 @@ public partial class Recipes : ContentPage
 
 	async void Recipes_SelectionChanged(object sender, SelectionChangedEventArgs e)
 	{
-		await Navigation.PushAsync(new RecipesDetailsPage(e.CurrentSelection.First() as Recipes));
+		await Navigation.PushAsync(new RecipesDetailsPage(e.CurrentSelection.First() as Models.Recipes));
 	}
 }
