@@ -5,15 +5,49 @@
              Title="Contacts"
              BackgroundColor="#FFC2C7">
     <VerticalStackLayout>
-        <Label 
-            Text="If You have any problems, contact our customer support!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        
         <StackLayout VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
             <StackLayout Orientation="Horizontal" >
                 <Image x:Name="imgcontacts" Source="contacts.png" WidthRequest="300" HeightRequest="300"  />
             </StackLayout>
+            
         </StackLayout>
+        <Grid>
+            <Label 
+                Text="If You have any problems, contact our"
+                FontSize="20"
+                FontAttributes="Bold"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                VerticalTextAlignment="Center"/>
+
+        </Grid>
+        <Grid>
+            <Label 
+                Text="customer support!"
+                FontSize="20"
+                FontAttributes="Bold"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                VerticalTextAlignment="Center"
+                />
+
+        </Grid>
+        <Grid Margin="10"></Grid>
+        <Grid>
+            <Label
+                Text="Phone nr: +123 456 789"
+                FontSize="20"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+        </Grid>
+        <Grid>
+            <Label 
+                Text="Email: fridgyfridge@mail.com"
+                FontSize="20"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+        </Grid>
     </VerticalStackLayout>
     
 </ContentPage>
