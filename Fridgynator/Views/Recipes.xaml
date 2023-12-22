@@ -112,40 +112,6 @@
                 <VerticalStackLayout
                     Spacing="12">
 
-                    <!--Search Box-->
-                    <Border
-                        Padding="12,4"
-                        BackgroundColor="#33CCCC"
-                        HorizontalOptions="Fill"
-                        Margin="0,0,24,0"
-                        HeightRequest="48">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="6" />
-                        </Border.StrokeShape>
-
-                        <Grid HorizontalOptions="Fill"
-                              VerticalOptions="Center"
-                              ColumnDefinitions="Auto,*"
-                              ColumnSpacing="16">
-
-                            <Image
-                                WidthRequest="18"
-                                HeightRequest="18"
-                                Source="imgsearch.png"
-                                Grid.Column="0"
-                                VerticalOptions="Center" />
-
-                            <Label
-                                Text="Search your favorite recipe"
-                                Grid.Column="1"
-                                VerticalOptions="Center"
-                                VerticalTextAlignment="Center"
-                                TextColor="Black"
-                                />
-
-                        </Grid>
-                    </Border>
-
                     <Label
                         Margin="0,12,0,0">
                         <Label.FormattedText>

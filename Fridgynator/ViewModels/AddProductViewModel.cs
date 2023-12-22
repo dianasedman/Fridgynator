@@ -4,26 +4,19 @@ using CommunityToolkit.Mvvm.Input;
 using Fridgynator.Models;
 using Microsoft.Maui.Storage;
 using System.Collections.ObjectModel;
-using System.Xml.Serialization;
+using System.Threading.Tasks;
 
-namespace Fridgynator.ViewModels;
-
-public partial class AddProductViewModel: ObservableObject
+namespace Fridgynator.ViewModels
 {
-    [ObservableProperty]
-    string title;
-
-    [ObservableProperty]
-    string imageSource;
-
-    [ObservableProperty]
-    private ObservableCollection<ProductsModel> productsList;
-
-
-
-    public AddProductViewModel()
+    public partial class AddProductViewModel : ObservableObject
     {
-        ProductsList = new ObservableCollection<ProductsModel>
+        private string title;
+        private string imageSource;
+        private ObservableCollection<ProductsModel> productsList;
+
+        public AddProductViewModel()
+        {
+            ProductsList = new ObservableCollection<ProductsModel>
             {
                 new ProductsModel { ImageSource = "banana.png", Title = "Bananas" },
                 new ProductsModel { ImageSource = "black_bread.png", Title = "Black bread" },
@@ -47,26 +40,38 @@ public partial class AddProductViewModel: ObservableObject
                 new ProductsModel { ImageSource = "water.png", Title = "Water" },
                 new ProductsModel { ImageSource = "white_bread.png", Title = "White bread" },
             };
-    }
+        }
 
-
-
-    [RelayCommand]
-    public async void Save()
-    {
-        var productItem = new ProductsModel
+        public string Title
         {
-            Title = Title,
-            ImageSource = ImageSource
+            get => title;
+            set => SetProperty(ref title, value);
+        }
 
-        };
+        public string ImageSource
+        {
+            get => imageSource;
+            set => SetProperty(ref imageSource, value);
+        }
 
-        await App.ProductsRepository.AddProductAsync(productItem);
+        public ObservableCollection<ProductsModel> ProductsList
+        {
+            get => productsList;
+            set => SetProperty(ref productsList, value);
+        }
 
-        await Toast.Make("Product has been added to fridge!").Show();
+        [RelayCommand]
+        public async Task Save()
+        {
+            var productItem = new ProductsModel
+            {
+                Title = Title,
+                ImageSource = ImageSource
+            };
+
+            await App.ProductsRepository.AddProductAsync(productItem);
+
+            await Toast.Make("Product has been added to the fridge!").Show();
+        }
     }
-
-    //public IRelayCommand SaveCommand => new RelayCommand(async () => await Save());
-
-
 }
