@@ -2,16 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Fridgynator.Views.Menu"
-             >
-
-    <ContentPage.Background>
-        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-            <GradientStop Color="#FFC2C7" Offset="0"/>
-            <!--<GradientStop Color="#ffeaec" Offset="0.5"/>-->
-            <GradientStop Color="#eaf7ff" Offset="1"/>
-        </LinearGradientBrush>
-    </ContentPage.Background>
-
+             BackgroundColor="#FFC2C7">
+   
 
     <StackLayout>
         <Label Text="MENU" TextColor="Black" HorizontalTextAlignment="Center" FontSize="24" />

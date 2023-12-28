@@ -16,15 +16,6 @@
         ColumnDefinitions="*,*"
         RowDefinitions="Auto,*">
 
-        <ImageButton
-            WidthRequest="24"
-            HeightRequest="24"
-            Source="imgback.png"
-            Grid.Row="0"
-            Grid.Column="0"
-            HorizontalOptions="Start"
-            VerticalOptions="Center"
-            Clicked="BackButton_Clicked" />
 
 
         <!--Main content scrollview-->
@@ -50,7 +41,9 @@
                 <!--Recipe Name-->
                 <Label 
                     Margin="0,-24,0,0"
-                    Text="{Binding Name}"/>
+                    Text="{Binding Name}"
+                    FontSize="24"
+                    FontAttributes="Bold"/>
 
                 <!--Recipe Subtitle-->
                 <Label 
@@ -75,8 +68,7 @@
                     Stroke="Transparent"/>
 
                 <!--Recipe images-->
-                <Label
-                    Text="Gallery"/>
+
 
                 <CollectionView
                     Margin="0,-6,0,0"
