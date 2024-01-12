@@ -5,6 +5,7 @@
              xmlns:viewModel="clr-namespace:Fridgynator.ViewModels"
              xmlns:models="clr-namespace:Fridgynator.Models"
              x:DataType="viewModel:FridgeViewModel"
+             
              Title="Fridge">
 
     <ContentPage.Background>
@@ -14,45 +15,38 @@
             <GradientStop Color="#eaf7ff" Offset="1"/>
         </LinearGradientBrush>
     </ContentPage.Background>
+    
+    
 
     <VerticalStackLayout>
         <Label 
             Text="Here are Your products that you have added to your fridge!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <ListView
-            ItemsSource="{Binding ProductItems}"
-            SelectionMode="None">
-            <ListView.ItemTemplate>
-                <DataTemplate
-                    x:DataType="models:ProductsModel">
-                    <ViewCell>
-                        <StackLayout>
-                            <Frame>
-                                <Grid
-                                    Padding="10">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                    </Grid.RowDefinitions>
-                                    <!--<Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="100*"/>
-                                        <ColumnDefinition Width="40*"/>
-                                    </Grid.ColumnDefinitions>-->
-                                    <Label
-                                        Text="{Binding Title}"
-                                        FontSize="16"
-                                        />
-                                    <Image 
-                                        Source="{Binding ImageSource}" 
-                                        WidthRequest="100" 
-                                        HeightRequest="100"/>
-                                </Grid>
-                            </Frame>
+        <CollectionView x:Name="collectionView" ItemsSource="{Binding ProductItems}" SelectionMode="None">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" Span="2" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <StackLayout Padding="10"  >
+                            <Label Text="{Binding Title}" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" Padding="10" />
+                            <Image Source="{Binding ImageSource}" WidthRequest="100" HeightRequest="100"/>
+                            <Button 
+                                        Text="Delete" 
+                                        Command="{Binding BindingContext.DeleteCommand, Source={x:Reference collectionView}}" 
+                                        CommandParameter="{Binding .}"  
+                                        HorizontalOptions="Center" 
+                                        VerticalOptions="EndAndExpand"
+                                        BackgroundColor="Red"
+                                        CornerRadius="10"
+                                        WidthRequest="100"
+                                    />
                         </StackLayout>
-                    </ViewCell>
+                    </Grid>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </VerticalStackLayout>
 </ContentPage>

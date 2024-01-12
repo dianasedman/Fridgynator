@@ -49,24 +49,39 @@ public partial class AddProductViewModel: ObservableObject
             };
     }
 
-
-
-    [RelayCommand]
-    public async void Save()
-    {
-        var productItem = new ProductsModel
-        {
-            Title = Title,
-            ImageSource = ImageSource
-
-        };
-
-        await App.ProductsRepository.AddProductAsync(productItem);
-
-        await Toast.Make("Product has been added to fridge!").Show();
-    }
-
-    //public IRelayCommand SaveCommand => new RelayCommand(async () => await Save());
-
-
+public string Title
+{
+    get => title;
+    set => SetProperty(ref title, value);
 }
+
+public string ImageSource
+{
+    get => imageSource;
+    set => SetProperty(ref imageSource, value);
+}
+
+public ObservableCollection<ProductsModel> ProductsList
+{
+    get => productsList;
+    set => SetProperty(ref productsList, value);
+}
+
+    
+
+        [RelayCommand]
+        public async Task Save(ProductsModel product)
+        {
+            if (product != null)
+            {
+                await App.ProductsRepository.AddProductAsync(product);
+
+                await Toast.Make("Product has been added to the fridge!").Show();
+            }
+        }
+
+        }
+ }
+
+       
+    
