@@ -18,21 +18,16 @@ public partial class Menu : ContentPage
 
     private async void NavigateToProducts(object sender, EventArgs e)
     {
-        // Create an instance of AddProductViewModel or obtain it from somewhere
-        //AddProductViewModel viewModel = new AddProductViewModel();
 
-        // Navigate to the Products page and pass the viewModel as a parameter
         await Navigation.PushAsync(new Products());
     }
     private async void NavigateToRecipes(object sender, EventArgs e)
     {
-        // Navigate to another page
         await Navigation.PushAsync(new Recipes());
     }
 
     private async void NavigateToContacts(object sender, EventArgs e)
     {
-        // Navigate to another page
         await Navigation.PushAsync(new Contacts());
     }
 }

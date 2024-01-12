@@ -51,13 +51,14 @@ public partial class FridgeViewModel : ObservableObject
         }
     }
 
+    //Deletes items from fridge
+
     [RelayCommand]
     public async Task Delete(ProductsModel product)
     {
         if (product != null)
         {
             ProductItems.Remove(product);
-            // You might want to delete the item from the database as well
             await App.ProductsRepository.DeleteProductAsync(product);
         }
     }

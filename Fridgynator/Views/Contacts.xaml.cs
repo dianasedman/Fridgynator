@@ -6,4 +6,8 @@ public partial class Contacts : ContentPage
 	{
 		InitializeComponent();
 	}
+    async void BackButton_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
+    }
 }

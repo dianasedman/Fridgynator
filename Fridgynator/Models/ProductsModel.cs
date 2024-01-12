@@ -11,6 +11,4 @@ public class ProductsModel
     public string ImageSource { get; set; }
     public int Quantity { get; set; }
 
-   // public ProductsModel() { }
-
 }

@@ -34,7 +34,6 @@ public partial class StartPage : ContentPage
         parentAnimation.Add(0, 1, new Animation(v => imgmilky.Rotation = v * 360, 0, 1));
         parentAnimation.Add(0, 1, new Animation(v => imgsausage.Rotation = v * 360, 0, 1));
 
-
         parentAnimation.Commit(this, "TransitionAnimation", 16, 3000, null, null);
     }
     private void OnButtonClick(object sender, EventArgs e)
