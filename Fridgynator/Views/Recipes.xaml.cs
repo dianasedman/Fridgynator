@@ -34,4 +34,9 @@ public partial class Recipes : ContentPage
 	{
 		await Navigation.PushAsync(new RecipesDetailsPage(e.CurrentSelection.First() as Models.Recipes));
 	}
+
+    async void BackButton_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
+    }
 }

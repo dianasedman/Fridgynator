@@ -48,6 +48,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\backbutton.png" />
 	  <None Remove="Resources\Images\bananas.png" />
 	  <None Remove="Resources\Images\burger.png" />
 	  <None Remove="Resources\Images\contacts_icon.png" />

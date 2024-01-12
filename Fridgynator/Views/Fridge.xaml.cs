@@ -16,4 +16,9 @@ public partial class Fridge : ContentPage
 		base.OnAppearing();
 		viewModel.GetProductsItemsCommand.Execute(null);
     }
+
+    async void BackButton_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
+    }
 }

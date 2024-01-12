@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Fridgynator.Views.Recipes"
              xmlns:models="clr-namespace:Fridgynator.Models"
-             Title="Recipes">
+             NavigationPage.HasNavigationBar="False">
 
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
@@ -14,34 +14,11 @@
 
 
     <Grid>
-        <!--Menu-->
-        <Grid
-            x:Name="MenuContainer">
-
-            <Grid.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="#FFC2C7" Offset="0"/>
-                    <GradientStop Color="#ffecea" Offset="1"/>
-                </LinearGradientBrush>
-            </Grid.Background>
-
-            <Grid.GestureRecognizers>
-                <TapGestureRecognizer Tapped="GridArea_Tapped" />
-            </Grid.GestureRecognizers>
-
-            <VerticalStackLayout
-                Margin="0,52,24,0"
-                HorizontalOptions="End"
-                Spacing="20">
-            </VerticalStackLayout>
-
-        </Grid>
-
         <!--Main Content-->
 
         <Grid
             x:Name="MainContentGrid"
-            Padding="24,52,24,0"
+            Padding="24,20,24,0"
             ColumnDefinitions="*, Auto"
             RowDefinitions="Auto,*">
 
@@ -51,7 +28,16 @@
                 Grid.Row="0"
                 Grid.Column="0"
                 VerticalOptions="Center">
-
+                <ImageButton 
+            WidthRequest="24"
+            HeightRequest="24"
+            Source="backbutton.png"
+            Grid.Row="0"
+            Grid.Column="0"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Clicked="BackButton_Clicked" 
+        />
                 <Label
                     
                     Text="Feast your eyes" 
@@ -112,8 +98,6 @@
                 <VerticalStackLayout
                     Spacing="12">
 
-                    
-
                     <Label
                         Margin="0,12,0,0">
                         <Label.FormattedText>
@@ -145,36 +129,35 @@
                         Background="{Binding Background}"
                         Padding="20">
 
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="24" />
-                                </Border.StrokeShape>
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="24" />
+                                    </Border.StrokeShape>
 
-                             <Grid RowDefinitions="*, Auto, Auto"
+                                    <Grid RowDefinitions="*, Auto, Auto"
                                    RowSpacing="4">
-                        <Image
+                                        <Image
                         Grid.Row="0"
                         Aspect="AspectFit"
                         VerticalOptions="Fill"
                         HorizontalOptions="Fill"
                         Source="{Binding HeroImage}" />
-                                        
-                        <Label 
+
+                                        <Label 
                             Grid.Row="1"
                             Text="{Binding Name}"
                             Margin="0,8,0,0"/>
 
-                        <Label 
+                                        <Label 
                             Grid.Row="2"
                             Text="{Binding Subtitle}"/>
 
-                        </Grid>
+                                    </Grid>
 
                                 </Border>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
 
                     </CollectionView>
-
 
                     <Label
                         Margin="0,12,0,0">
@@ -206,12 +189,12 @@
                         StrokeThickness="0"
                         Padding="16">
 
-                        <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="16" />
-                        </Border.StrokeShape>
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="16" />
+                                    </Border.StrokeShape>
 
-                        <Grid RowDefinitions="*, Auto, Auto" RowSpacing="4">
-                       <Image
+                                    <Grid RowDefinitions="*, Auto, Auto" RowSpacing="4">
+                                        <Image
                         Grid.Row="0"
                         Aspect="AspectFit"
                         VerticalOptions="Fill"
@@ -219,24 +202,18 @@
                         Source="{Binding HeroImage}" />
 
 
-                        <Label
+                                        <Label
                              Grid.Row="1"
                              Text="{Binding Name}"
                              Margin="0,4,0,0" />
-                        </Grid>
+                                    </Grid>
 
                                 </Border>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>
-
                 </VerticalStackLayout>
-
             </ScrollView>
-
-
         </Grid>
-
     </Grid>
-
 </ContentPage>

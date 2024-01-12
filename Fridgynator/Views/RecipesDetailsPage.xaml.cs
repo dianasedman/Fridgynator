@@ -8,12 +8,10 @@ public partial class RecipesDetailsPage : ContentPage
 	{
 		InitializeComponent();
 		this.BindingContext = recipes;
-
 	}
 
-
-	async void BackButton_Clicked(object sender, EventArgs e)
-	{
-		await Navigation.PopAsync();
-	}
+    async void BackButton_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
+    }
 }
