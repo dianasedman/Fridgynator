@@ -17,8 +17,8 @@
         RowDefinitions="Auto,*">
 
         <ImageButton 
-            WidthRequest="24"
-            HeightRequest="24"
+            WidthRequest="30"
+            HeightRequest="30"
             Source="backbutton.png"
             Grid.Row="0"
             Grid.Column="0"
@@ -80,8 +80,8 @@
 
                 <CollectionView
                     Margin="0,-6,0,0"
-                    HeightRequest="400"
-                    WidthRequest="400"
+                    HeightRequest="200"
+                    WidthRequest="200"
                     ItemsSource="{Binding Images}">
 
                     <CollectionView.ItemsLayout>

@@ -80,6 +80,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\AddOwnProducts.xaml.cs">
+	    <DependentUpon>AddOwnProducts.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\AddOwnProducts.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Contacts.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

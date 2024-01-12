@@ -29,8 +29,8 @@ namespace Fridgynator.Services
 							  "Kuumuta pannil või või õli. Lisa hakitud sibul ja prae kergelt läbi. Siis lisa hakkliha ja prae segades, kuni hakkliha on kenasti küps. Maitsesta soola-pipraga.\r\n" +
 							  "Puista peale nisujahu, sega läbi. Lisa vedelik ning hauta kastet kümmekond minutit. Lõpus sega juurde hapukoor ja soovi korral hakitud maitseroheline.\r\n" +
 							  "Serveeri keedetud kartulite ja värske salatiga.",
-				AccentColorStart = Color.FromArgb("#353535"),
-				AccentColorEnd = Color.FromArgb("#8d9098"),
+				AccentColorStart = Color.FromArgb("#a480cf"),
+				AccentColorEnd = Color.FromArgb("#779be7"),
 				Images = new()
 				{
 					"https://nami-nami.ee/files/recipes/380/hakklihakaste.jpg"
@@ -63,9 +63,9 @@ namespace Fridgynator.Services
 							  "Vahusta toasoe või suhkruga. Sega juurde hapukoor, muna ja küpsetuspulbriga segatud jahu ning sega tainas ühtlaseks (tainas on pehme, aga mitte vedel).\r\n\r\nSuru tainas võitatud 24 cm lahtikäiva vormi põhjale ja servadele.\r\n" +
 							  "Kata tükeldatud rabarbriga* ning puista peale veidi demerara suhkrut.\r\n\r\nKüpseta 200kraadise ahju keskosas umbes 30 minutit, kuni tainas on kuldne ja täidis hüübinud.\r\n" +
 							  "Lase veidi vormis jahtuda, siis libista ettevaatlikult koogialusele.",
-				AccentColorStart = Color.FromArgb("#353535"),
-				AccentColorEnd = Color.FromArgb("#8d9098"),
-				Images = new List<string>
+                AccentColorStart = Color.FromArgb("#a480cf"),
+                AccentColorEnd = Color.FromArgb("#779be7"),
+                Images = new ()
 				{
 					"https://images.delfi.ee/media-api-image-cropper/v1/0715f140-b8fc-11eb-a43e-c39d2a6aaf33.jpg?noup&w=1200&h=711"
 				}
@@ -90,8 +90,8 @@ namespace Fridgynator.Services
 							  "Pane liha vette ja kuumuta keemiseni. Riisu tekkinud vaht.\r\n" +
 							  "Pane seejärel lihale hapukapsas, siis leotatud kruubid, hakitud porgand ja sibul. Maitsesta soola, pipra ja loorberilehega, natuke lisa ka suhkrut või siirupit. Keeda madalal kuumusel umbes kaks tundi, kuni kruubid ja liha on pehmed.\r\n" +
 							  "Timmi maitse parajaks ja serveeri.",
-				AccentColorStart = Color.FromArgb("#353535"),
-				AccentColorEnd = Color.FromArgb("#8d9098"),
+				AccentColorStart = Color.FromArgb("#a480cf"),
+				AccentColorEnd = Color.FromArgb("#779be7"),
 				Images = new()
 				{
 					"https://nami-nami.ee/files//recipes/406/Juta2020HapukapsaSupp.jpg",
@@ -109,8 +109,8 @@ namespace Fridgynator.Services
 							  "soola ja musta pipart\r\n\r\n" +
 							  "**Valmistamine:**\r\n" +
 							  "Vala vesi ära ja lase kartulitel potis veidi auruda. Tambi kartulid pudrunuia abil katki, lisades samal ajal vähehaaval kuuma piima ja tükeldatud või. Klopi puder puulusikaga kohevaks. Maitsesta soola ja pipraga ja serveeri.",
-				AccentColorStart = Color.FromArgb("#353535"),
-				AccentColorEnd = Color.FromArgb("#8d9098"),
+				AccentColorStart = Color.FromArgb("#a480cf"),
+				AccentColorEnd = Color.FromArgb("#779be7"),
 				Images = new()
 				{
 					"https://nami-nami.ee/files/recipes/7337/Juta2021OliivoliKartulipuder.jpg"
