@@ -30,7 +30,12 @@
                         <!--<Button Text="ADD" BorderColor="Black" TextColor="Black" Clicked="OnSaveButtonClicked"/>-->
                         <Button 
                             Text="Add" 
-                            Command="{Binding SaveCommand}" 
+
+                            Command="{Binding BindingContext.SaveCommand, Source={x:Reference collectionView}}" 
+                            CommandParameter="{Binding .}"  
+
+                            
+
                             HorizontalOptions="Center" 
                             VerticalOptions="EndAndExpand"
                             BackgroundColor="Red"
