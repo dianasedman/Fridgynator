@@ -24,6 +24,7 @@ public static class MauiProgram
 
 		builder.Services.AddSingleton<Products>();
 		builder.Services.AddSingleton<AddProductViewModel>();
+		builder.Services.AddSingleton<FridgeViewModel>();
 
 		// setup DB
 		var dbName = "ProductsDatabase.db";

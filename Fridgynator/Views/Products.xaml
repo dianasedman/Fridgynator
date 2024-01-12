@@ -27,7 +27,7 @@
                         <Button 
                             Text="Add" 
                             Command="{Binding BindingContext.SaveCommand, Source={x:Reference collectionView}}" 
-                            CommandParameter="{Binding}"  
+                            CommandParameter="{Binding .}"  
                             HorizontalOptions="Center" 
                             VerticalOptions="EndAndExpand"
                             BackgroundColor="Red"

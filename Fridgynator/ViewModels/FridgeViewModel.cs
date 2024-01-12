@@ -1,20 +1,35 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Fridgynator.Models;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Fridgynator.ViewModels;
 
 public partial class FridgeViewModel : ObservableObject
 {
-    [ObservableProperty]
+    private string title;
+    private string imageSource;
+
     ObservableCollection<ProductsModel> productItems;
 
+    public string Title
+    {
+        get => title;
+        set => SetProperty(ref title, value);
+    }
+
+    public string ImageSource
+    {
+        get => imageSource;
+        set => SetProperty(ref imageSource, value);
+    }
+
+    public ObservableCollection<ProductsModel> ProductItems
+    {
+        get => productItems;
+        set => SetProperty(ref productItems, value);
+    }
     public FridgeViewModel()
     {
         ProductItems = new ObservableCollection<ProductsModel>();
@@ -33,6 +48,17 @@ public partial class FridgeViewModel : ObservableObject
         foreach (var product in products)
         {
             ProductItems.Add(product);
+        }
+    }
+
+    [RelayCommand]
+    public async Task Delete(ProductsModel product)
+    {
+        if (product != null)
+        {
+            ProductItems.Remove(product);
+            // You might want to delete the item from the database as well
+            await App.ProductsRepository.DeleteProductAsync(product);
         }
     }
 }

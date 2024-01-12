@@ -61,17 +61,23 @@ namespace Fridgynator.ViewModels
         }
 
         [RelayCommand]
-        public async Task Save()
+        public async Task Save(ProductsModel product)
         {
-            var productItem = new ProductsModel
+            //var productItem = new ProductsModel
+            //{
+            //    Title = Title,
+            //    ImageSource = ImageSource
+            //};
+
+            //await App.ProductsRepository.AddProductAsync(productItem);
+
+            //await Toast.Make("Product has been added to the fridge!").Show();
+            if (product != null)
             {
-                Title = Title,
-                ImageSource = ImageSource
-            };
+                await App.ProductsRepository.AddProductAsync(product);
 
-            await App.ProductsRepository.AddProductAsync(productItem);
-
-            await Toast.Make("Product has been added to the fridge!").Show();
+                await Toast.Make("Product has been added to the fridge!").Show();
+            }
         }
     }
 }
