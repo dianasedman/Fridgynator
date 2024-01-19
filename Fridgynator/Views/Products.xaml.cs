@@ -22,5 +22,10 @@ public partial class Products : ContentPage
         await Navigation.PopAsync();
     }
 
+    private async void NavigateTo_AddOwnProducts(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new AddOwnProducts());
+    }
+
 }
 

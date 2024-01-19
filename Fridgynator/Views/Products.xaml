@@ -12,26 +12,40 @@
             <GradientStop Color="#ffecea" Offset="1"/>
         </LinearGradientBrush>
     </ContentPage.Background>
-    <VerticalStackLayout>
-        <ImageButton 
-            WidthRequest="24"
-            HeightRequest="24"
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <ImageButton 
+            WidthRequest="30"
+            HeightRequest="30"
             Source="backbutton.png"
             Grid.Row="0"
             Grid.Column="0"
             HorizontalOptions="Start"
             VerticalOptions="Center"
             Clicked="BackButton_Clicked" 
-        />
-        <Label 
+            />
+
+            <Label 
             Text="Add items to your fridge!"
             FontSize="Medium"
             FontAttributes="Bold"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-    
 
-    <CollectionView 
+            <Button 
+            Text="ADD YOUR OWN PRODUCT" 
+            TextColor="#edf2f4" 
+            HorizontalOptions="Center" 
+            VerticalOptions="EndAndExpand"
+            BackgroundColor="#da1e37"
+            CornerRadius="10"
+            WidthRequest="200"
+            Clicked="NavigateTo_AddOwnProducts" 
+            />
+
+
+            <CollectionView 
         x:Name="collectionView" 
         ItemsSource="{Binding ProductsList}" 
         SelectionMode="None">
@@ -40,7 +54,7 @@
                 Orientation="Vertical" 
                 Span="2" />
         </CollectionView.ItemsLayout>
-
+    
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <Grid>
@@ -55,12 +69,13 @@
                             WidthRequest="100" 
                             HeightRequest="100"/>
                         <Button 
-                            Text="Add" 
+                            Text="ADD" 
+                            TextColor="#edf2f4"
                             Command="{Binding BindingContext.SaveCommand, Source={x:Reference collectionView}}" 
                             CommandParameter="{Binding .}"  
                             HorizontalOptions="Center" 
                             VerticalOptions="EndAndExpand"
-                            BackgroundColor="Red"
+                            BackgroundColor="#da1e37"
                             CornerRadius="10"
                             WidthRequest="100"
                         />
@@ -69,6 +84,7 @@
             </DataTemplate>
         </CollectionView.ItemTemplate>
     
-    </CollectionView>
-    </VerticalStackLayout>
+        </CollectionView>
+     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
