@@ -21,4 +21,9 @@ public partial class Fridge : ContentPage
     {
         await Navigation.PopAsync();
     }
+
+   
+
+
+
 }

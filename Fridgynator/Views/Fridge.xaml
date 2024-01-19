@@ -57,6 +57,10 @@
                                     Source="{Binding ImageSource}" 
                                     WidthRequest="100" 
                                     HeightRequest="100"/>
+                                <Label 
+                                    Text="{Binding Comment}" 
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="CenterAndExpand"/>
                                 <Button 
                                     Text="DELETE" 
                                     TextColor="#edf2f4"

@@ -16,6 +16,6 @@ namespace Fridgynator.ViewModels
         string title;
 
         [ObservableProperty]
-        int quantity;    
+        string comment;    
     }
 }

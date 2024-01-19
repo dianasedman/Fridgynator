@@ -68,6 +68,10 @@
                             Source="{Binding ImageSource}" 
                             WidthRequest="100" 
                             HeightRequest="100"/>
+                        <Entry 
+                            Placeholder="Comment" 
+                            Text="{Binding Comment}" 
+                            WidthRequest="100"/>
                         <Button 
                             Text="ADD" 
                             TextColor="#edf2f4"

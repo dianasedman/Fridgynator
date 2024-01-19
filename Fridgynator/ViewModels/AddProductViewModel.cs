@@ -12,6 +12,7 @@ public partial class AddProductViewModel: ObservableObject
 {
     string title;
     string imageSource;
+    string comment;
     private ObservableCollection<ProductsModel> productsList;
 
     public AddProductViewModel()
@@ -51,7 +52,13 @@ public partial class AddProductViewModel: ObservableObject
     {
         get => imageSource;
         set => SetProperty(ref imageSource, value);
-}
+    }
+
+    public string Comment
+    {
+        get => comment;
+        set => SetProperty(ref comment, value);
+    }
 
     public ObservableCollection<ProductsModel> ProductsList
     {
@@ -59,20 +66,26 @@ public partial class AddProductViewModel: ObservableObject
         set => SetProperty(ref productsList, value);
     }
 
-   
+
     //Saves products to fridge
     [RelayCommand]
     public async Task Save(ProductsModel product)
     {
+        
         if (product != null)
         {
+            
+            product.Comment = Comment;   
             await App.ProductsRepository.AddProductAsync(product);
 
             await Toast.Make("Product has been added to the fridge!").Show();
         }
     }
-      
- }
 
-       
     
+
+
+}
+
+
+
