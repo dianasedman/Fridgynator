@@ -71,13 +71,5 @@ public partial class FridgeViewModel : ObservableObject
         }
     }
 
-    //private void MapToObservableCollection(List<ProductsModel> products)
-    //{
-    //    ProductItems.Clear();
-    //    foreach (var product in products)
-    //    {
-    //        ProductItems.Add(product);
-    //        Debug.WriteLine($"Product: {product.Title}, Quantity: {product.Quantity}, Comment: {product.Comment}");
-    //    }
-    //}
+    
 }

@@ -75,27 +75,14 @@ public partial class AddProductViewModel: ObservableObject
         if (product != null)
         {
             
-            product.Comment = Comment;
-            //product = new ProductsModel() { ImageSource = imageSource, Title = title, Comment  = comment };
+            product.Comment = Comment;   
             await App.ProductsRepository.AddProductAsync(product);
 
             await Toast.Make("Product has been added to the fridge!").Show();
         }
     }
 
-    //[RelayCommand]
-    //public async Task Save()
-    //{
-    //    // Otsige toodet olemasolevate hulgas
-    //    var existingProduct = ProductsList.FirstOrDefault(p => p.Title == Title && p.ImageSource == ImageSource);
-
-    //    if (existingProduct != null)
-    //    {
-    //        existingProduct.Comment = Comment; // Uus kommentaar
-    //        await Toast.Make($"Added {Title}(s) to the fridge with comment: {Comment}").Show();
-    //    }
-        
-    //}
+    
 
 
 }
