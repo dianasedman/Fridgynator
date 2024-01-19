@@ -35,14 +35,14 @@
                 <ImageButton 
                     Source="fridge_icon.png" 
                     Clicked="NavigateToFridge" 
-                    WidthRequest="130"
-                    HeightRequest="130" 
+                    WidthRequest="150"
+                    HeightRequest="150" 
                     Padding="20" />
                 <ImageButton 
                     Source="products_icon.png" 
                     Clicked="NavigateToProducts" 
-                    WidthRequest="130" 
-                    HeightRequest="130" 
+                    WidthRequest="150" 
+                    HeightRequest="150" 
                     Padding="20"/>
             </StackLayout>
 
@@ -54,14 +54,14 @@
                 <ImageButton 
                     Source="recipe_icon.png" 
                     Clicked="NavigateToRecipes" 
-                    WidthRequest="130" 
-                    HeightRequest="130" 
+                    WidthRequest="150" 
+                    HeightRequest="150" 
                     Padding="20"/>
                 <ImageButton 
                     Source="contacts_icon.png" 
                     Clicked="NavigateToContacts" 
-                    WidthRequest="130" 
-                    HeightRequest="130" 
+                    WidthRequest="150" 
+                    HeightRequest="150" 
                     Padding="20"/>
             </StackLayout>
         </Grid>

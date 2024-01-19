@@ -12,8 +12,8 @@
     </ContentPage.Background>
     <VerticalStackLayout>
         <ImageButton 
-            WidthRequest="24"
-            HeightRequest="24"
+            WidthRequest="30"
+            HeightRequest="30"
             Source="backbutton.png"
             Grid.Row="0"
             Grid.Column="0"
