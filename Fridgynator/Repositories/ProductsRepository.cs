@@ -25,11 +25,12 @@ public class ProductsRepository
         await con.CreateTableAsync<ProductsModel>();
     }
 
-    public async Task AddProductAsync(ProductsModel product)
+    public async Task AddProductAsync(ProductsModel product, string comment)
     {
         await Init();
         try
         {
+            product.Comment = comment;
             await con.InsertAsync(product);
         }
         catch (Exception ex)
