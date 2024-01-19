@@ -9,6 +9,5 @@ public class ProductsModel
     public int Id { get; set; }
     public string Title { get; set; }
     public string ImageSource { get; set; }
-    public int Quantity { get; set; }
-
+    public string Comment { get; set; }
 }

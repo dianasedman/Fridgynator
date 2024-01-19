@@ -54,6 +54,9 @@
                             Source="{Binding ImageSource}" 
                             WidthRequest="100" 
                             HeightRequest="100"/>
+                        <Entry 
+                            Placeholder="Add a comment..." 
+                            Text="{Binding Comment}" />
                         <Button 
                             Text="Add" 
                             Command="{Binding BindingContext.SaveCommand, Source={x:Reference collectionView}}" 

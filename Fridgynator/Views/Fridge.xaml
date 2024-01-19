@@ -57,6 +57,15 @@
                                 Source="{Binding ImageSource}" 
                                 WidthRequest="100" 
                                 HeightRequest="100"/>
+                            <!--<Label 
+                                Text="{Binding Comment}" 
+                                HorizontalTextAlignment="Center"
+                                VerticalOptions="CenterAndExpand" 
+                                Padding="10" />-->
+                            <Label 
+                                Text="{Binding Comment}" 
+                                HorizontalOptions="Center"
+                                VerticalOptions="CenterAndExpand"/>
                             <Button 
                                 Text="Delete" 
                                 Command="{Binding BindingContext.DeleteCommand, Source={x:Reference collectionView}}" 
