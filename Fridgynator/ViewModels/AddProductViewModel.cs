@@ -4,7 +4,7 @@ using CommunityToolkit.Mvvm.Input;
 using Fridgynator.Models;
 using Microsoft.Maui.Storage;
 using System.Collections.ObjectModel;
-using System.Xml.Serialization;
+using System.Diagnostics;
 
 namespace Fridgynator.ViewModels;
 
@@ -66,20 +66,17 @@ public partial class AddProductViewModel: ObservableObject
         set => SetProperty(ref productsList, value);
     }
 
-
     //Saves products to fridge
     [RelayCommand]
     public async Task Save(ProductsModel product)
     {
-        
         if (product != null)
         {
-            
-            product.Comment = Comment;   
-            await App.ProductsRepository.AddProductAsync(product);
-
+            Debug.WriteLine($"Saving product with Comment: {Comment}");
+            await App.ProductsRepository.AddProductAsync(product, Comment);
             await Toast.Make("Product has been added to the fridge!").Show();
         }
+       
     }
 
     
